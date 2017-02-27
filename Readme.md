@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Елена Есина](https://up.htmlacademy.ru/adaptive/10/user/261907).
-* Наставник: `Неизвестно`.
+* Наставник: [Лиза Позднякова](https://up.htmlacademy.ru/adaptive/10/user/5608).
 
 ---
 

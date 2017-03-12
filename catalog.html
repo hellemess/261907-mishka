@@ -10,9 +10,7 @@
         <a class="main-header__logo" href="/">
           <img src="http://placehold.it/86x35" alt="Мишка" width="86" height="35">
         </a>
-        <a class="main-header__menu-toggle  main-header__menu-toggle--off" href="#">
-          <span class="visually-hidden">Меню</span>
-        </a>
+        <a class="main-header__menu-toggle  main-header__menu-toggle--off  visually-hidden" href="#">Меню</a>
         <ul class="main-header__menu-list">
           <li class="main-header__menu-item">
             <a class="main-header__menu-link">Каталог товаров</a>
@@ -39,9 +37,7 @@
         </section>
         <section class="product__buy">
           <span class="product__price">1 200 руб.</span>
-          <a  class="product__cart" href="#">
-            <span class="visually-hidden">В корзину</span>
-          </a>
+          <a  class="product__cart  visually-hidden" href="#">В корзину</a>
         </section>
       </article>
       <article class="product">
@@ -52,9 +48,7 @@
         </section>
         <section class="product__buy">
           <span class="product__price">690 руб.</span>
-          <a  class="product__cart" href="#">
-            <span class="visually-hidden">В корзину</span>
-          </a>
+          <a  class="product__cart  visually-hidden" href="#">В корзину</a>
         </section>
       </article>
       <article class="product">
@@ -65,9 +59,7 @@
         </section>
         <section class="product__buy">
           <span class="product__price">1 500 руб.</span>
-          <a  class="product__cart" href="#">
-            <span class="visually-hidden">В корзину</span>
-          </a>
+          <a  class="product__cart  visually-hidden" href="#">В корзину</a>
         </section>
       </article>
       <aside class="production-process">
@@ -91,27 +83,19 @@
       </ul>
       <address class="copyright">
         Разработано
-        <a class="copyright__link" href="#">
-          <span class="visually-hidden">HTML Academy</span>
-        </a>
+        <a class="copyright__link  visually-hidden" href="#">HTML Academy</a>
       </address>
     </footer>
     <section class="put-in-cart">
       <h2 class="put-in-cart__heading">Добавить в корзину</h2>
       <form class="put-in-cart__choose-size" action="https://echo.htmlacademy.ru/" method="post">
         <p>Выберите размер:</p>
-        <label class="put-in-cart__size">
-          <input type="radio" name="size" value="s" checked>
-          S
-        </label>
-        <label class="put-in-cart__size">
-          <input type="radio" name="size" value="m">
-          M
-        </label>
-        <label class="put-in-cart__size">
-          <input type="radio" name="size" value="l">
-          L
-        </label>
+        <input type="radio" name="size" id="s" value="s" checked>
+        <label class="put-in-cart__size" for="s">S</label>
+        <input type="radio" name="size" id="m" value="m">
+        <label class="put-in-cart__size" for="m">M</label>
+        <input type="radio" name="size" id="l" value="l">
+        <label class="put-in-cart__size" for="l">L</label>
         <button class="btn  btn--green" type="submit">Добавить</button>
       </form>
     </section>

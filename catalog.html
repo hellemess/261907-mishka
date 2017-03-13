@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог товаров — HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page">
     <header class="main-header">
       <nav class="main-header__main-nav">
         <a class="main-header__logo" href="/">
@@ -34,10 +35,10 @@
         <section class="product__info">
           <h2 class="product__heading">Зайчик-попрыгайчик</h2>
           <p class="product__desc">Рост 30 см, вес 200 г</p>
-        </section>
-        <section class="product__buy">
-          <span class="product__price">1 200 руб.</span>
-          <a  class="product__cart  visually-hidden" href="#">В корзину</a>
+          <section class="product__buy">
+            <span class="product__price">1 200 руб.</span>
+            <a  class="product__cart  visually-hidden" href="#">В корзину</a>
+          </section>
         </section>
       </article>
       <article class="product">
@@ -45,10 +46,10 @@
         <section class="product__info">
           <h2 class="product__heading">Корзинка для белья</h2>
           <p class="product__desc">Диаметр 15 см, высота 10 см</p>
-        </section>
-        <section class="product__buy">
-          <span class="product__price">690 руб.</span>
-          <a  class="product__cart  visually-hidden" href="#">В корзину</a>
+          <section class="product__buy">
+            <span class="product__price">690 руб.</span>
+            <a  class="product__cart  visually-hidden" href="#">В корзину</a>
+          </section>
         </section>
       </article>
       <article class="product">
@@ -56,29 +57,29 @@
         <section class="product__info">
           <h2 class="product__heading">Большая корзинка для игрушек</h2>
           <p class="product__desc">Диаметр 30 см, высота 30 см</p>
+          <section class="product__buy">
+            <span class="product__price">1 500 руб.</span>
+            <a  class="product__cart  visually-hidden" href="#">В корзину</a>
+          </section>
         </section>
-        <section class="product__buy">
-          <span class="product__price">1 500 руб.</span>
-          <a  class="product__cart  visually-hidden" href="#">В корзину</a>
-        </section>
-      </article>
+        </article>
       <aside class="production-process">
         <h2 class="production-process__heading">Процесс производства</h2>
         <div class="production-process__video"></div>
-        <p class="production-process__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <p class="production-process__comment">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="btn" href="#">Сделать заказ</a>
       </aside>
     </main>
     <footer class="main-footer">
       <ul class="social">
         <li class="social__item">
-          <a class="social__link  social__link--instagram" href="#">Инстаграм</a>
+          <a class="social__link  social__link--instagram  visually-hidden" href="#">Инстаграм</a>
         </li>
         <li class="social__item">
-          <a class="social__link  social__link--facebook" href="#">Фейсбук</a>
+          <a class="social__link  social__link--facebook  visually-hidden" href="#">Фейсбук</a>
         </li>
         <li class="social__item">
-          <a class="social__link  social__link--twitter" href="#">Твиттер</a>
+          <a class="social__link  social__link--twitter  visually-hidden" href="#">Твиттер</a>
         </li>
       </ul>
       <address class="copyright">
@@ -90,13 +91,21 @@
       <h2 class="put-in-cart__heading">Добавить в корзину</h2>
       <form class="put-in-cart__choose-size" action="https://echo.htmlacademy.ru/" method="post">
         <p>Выберите размер:</p>
-        <input type="radio" name="size" id="s" value="s" checked>
-        <label class="put-in-cart__size" for="s">S</label>
-        <input type="radio" name="size" id="m" value="m">
-        <label class="put-in-cart__size" for="m">M</label>
-        <input type="radio" name="size" id="l" value="l">
-        <label class="put-in-cart__size" for="l">L</label>
-        <button class="btn  btn--green" type="submit">Добавить</button>
+        <ul class="put-in-cart__list">
+          <li class="put-in-cart__item">
+            <input type="radio" name="size" id="s" value="s" checked>
+            <label class="put-in-cart__size" for="s">S</label>
+          </li>
+          <li class="put-in-cart__item">
+            <input type="radio" name="size" id="m" value="m">
+            <label class="put-in-cart__size" for="m">M</label>
+          </li>
+          <li class="put-in-cart__item">
+            <input type="radio" name="size" id="l" value="l">
+            <label class="put-in-cart__size" for="l">L</label>
+          </li>
+        </ul>
+        <button class="btn  btn--aqua" type="submit">Добавить</button>
       </form>
     </section>
   </body>

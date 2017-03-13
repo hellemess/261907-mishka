@@ -1,0 +1,47 @@
+.btn {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font: inherit;
+
+  .bold();
+
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  background: white;
+  border: 2px solid @main-color;
+
+  &:hover {
+    color: white;
+    background: @main-color;
+  }
+
+  &:active {
+    color: fade(white, 30%);
+    background: @main-color;
+  }
+
+  &--bigger-font {
+    font-size: 18px;
+  }
+
+  &--aqua {
+    color: white;
+    background: @aqua;
+    border-color: @aqua;
+
+    &:hover {
+      background: @dark-aqua;
+      border-color: @dark-aqua;
+    }
+
+    &:active {
+      color: fade(white, 30%);
+      background: @dark-aqua;
+      border-color: @dark-aqua;
+    }
+  }
+}

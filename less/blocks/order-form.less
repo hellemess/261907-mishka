@@ -1,0 +1,56 @@
+.order-form {
+  .padding();
+
+  padding-bottom: 30px;
+}
+
+.order-form__section {
+  border: none;
+  border-top: 1px solid @aqua;
+}
+
+.order-form__section-heading {
+  .aqua-heading();
+}
+
+.order-form__list {
+  .reset-list();
+}
+
+.order-form__radio,
+.order-form__checkbox,
+.order-form__label {
+  .bold(17px, black);
+
+  line-height: 1.1;
+}
+
+.order-form__field,
+.order-form__textarea {
+  font: inherit;
+  line-height: 1.1;
+}
+
+.order-form__field:-moz-placeholder,
+.order-form__textarea:-moz-placeholder {
+  color: fade(@main-color, 30%);
+}
+
+.order-form__field::-moz-placeholder,
+.order-form__textarea::-moz-placeholder {
+  color: fade(@main-color, 30%);
+}
+
+.order-form__field::-webkit-input-placeholder,
+.order-form__textarea::-webkit-input-placeholder {
+  color: fade(@main-color, 30%);
+}
+
+.order-form__field:-ms-input-placeholder,
+.order-form__textarea:-ms-input-placeholder {
+  color: fade(@main-color, 30%);
+}
+
+.order-form__comment {
+  font-size: 14px;
+}

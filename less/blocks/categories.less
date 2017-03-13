@@ -1,0 +1,32 @@
+.categories {
+  .reset-list();
+}
+
+.categories__link {
+  .padding();
+
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .bold(19px, white);
+
+  line-height: 1.3;
+  text-decoration: none;
+
+  &:hover {
+    padding-bottom: 35px;
+  }
+
+  &:active {
+    color: fade(white, 30%);
+  }
+
+  &--accessories {
+    background: @aqua;
+  }
+
+  &--toys {
+    background: @dark-aqua;
+  }
+}

@@ -1,9 +1,19 @@
 .product-of-week {
-  .padding();
+  .container();
+
+  min-height: 796px;
+  padding-right: 30px;
+  padding-left: 30px;
+  box-sizing: border-box;
 }
 
 .product-of-week__heading {
+  margin: 0;
+  margin-top: 29px;
+
   .bold(25px, black);
+
+  line-height: 1.1;
 }
 
 .product-of-week__crossheading {
@@ -11,9 +21,131 @@
 }
 
 .product-of-week__desc {
+  min-height: 70px;
+  margin-top: 20px;
+
   line-height: 1.6;
 }
 
+.product-of-week__features {
+  width: 260px;
+  height: 115px;
+  margin-top: 20px;
+}
+
+.product-of-week__picture {
+  width: 260px;
+  height: 315px;
+  margin-top: 30px;
+}
+
 .product-of-week__price {
+  margin-top: 10px;
+
   .bold();
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .product-of-week {
+    position: relative;
+
+    min-height: 580px;
+    margin-top: 50px;
+    padding-left: 0;
+  }
+
+  .product-of-week__header {
+    .clearfix();
+
+    margin-top: 40px;
+  }
+
+  .product-of-week__heading {
+    float: left;
+    width: 425px;
+    min-height: 50px;
+    margin: 0;
+  }
+
+  .product-of-week__crossheading {
+    float: right;
+    width: 115px;
+
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .product-of-week__desc {
+    min-height: 81px;
+    margin: 0;
+    margin-right: 350px;
+  }
+
+  .product-of-week__features {
+    width: 290px;
+    margin: 0;
+    margin-top: 38px;
+    margin-right: 350px;
+  }
+
+  .product-of-week__picture {
+    position: absolute;
+    top: 70px;
+    right: 0;
+
+    width: 334px;
+    height: 404px;
+  }
+
+  .product-of-week__price {
+    margin-top: 65px;
+    margin-right: 350px;
+  }
+
+  .product-of-week .btn {
+    margin-right: 350px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-of-week {
+    width: 700px;
+    min-height: 684px;
+  }
+
+  .product-of-week__header {
+    position: relative;
+    z-index: 1;
+
+    width: 698px;
+    margin-top: 130px;
+  }
+
+  .product-of-week__crossheading {
+    position: absolute;
+    left: -180px;
+  }
+
+  .product-of-week__features {
+    margin-top: 60px;
+    margin-right: 510px;
+  }
+
+  .product-of-week__picture {
+    top: -80px;
+    right: -175px;
+
+    width: 525px;
+    height: 636px;
+  }
+
+  .product-of-week__price {
+    margin-top: 115px;
+    margin-right: 510px;
+  }
+
+  .product-of-week .btn {
+    margin-right: 510px;
+  }
 }

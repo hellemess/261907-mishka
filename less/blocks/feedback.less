@@ -1,8 +1,16 @@
 .feedback {
-  .padding();
+  .container();
+
+  min-height: 645px;
+  padding-right: 30px;
+  padding-left: 30px;
+  box-sizing: border-box;
 }
 
 .feedback__heading {
+  margin: 0;
+  margin-top: 20px;
+
   .bold(25px, black);
 }
 
@@ -21,4 +29,38 @@
   line-height: 1.3;
 
   color: black;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback {
+    position: relative;
+
+    .clearfix();
+
+    width: 768px;
+    min-height: 454px;
+    margin-top: 30px;
+    padding-top: 58px;
+    padding-left: 50px;
+  }
+
+  .feedback__nav {
+    float: right;
+    width: 200px;
+    margin-top: -58px;
+  }
+
+  .feedback .btn {
+    position: absolute;
+    top: 57px;
+    right: 51px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback {
+    width: 1050px;
+    padding-right: 0;
+    padding-left: 176px;
+  }
 }

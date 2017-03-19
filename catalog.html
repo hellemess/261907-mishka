@@ -2,30 +2,44 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta
+      viewport="viewport"
+      content="width=device-width, initial-scale=1.0">
     <title>Каталог товаров — HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page">
-    <header class="main-header">
+    <header class="main-header" id="page-top">
       <nav class="main-header__main-nav">
         <a class="main-header__logo" href="/">
           <img src="http://placehold.it/86x35" alt="Мишка" width="86" height="35">
         </a>
         <a class="main-header__menu-toggle  main-header__menu-toggle--off  visually-hidden" href="#">Меню</a>
-        <ul class="main-header__menu-list">
+        <ul class="main-header__main-menu-list">
           <li class="main-header__menu-item">
             <a class="main-header__menu-link">Каталог товаров</a>
           </li>
           <li class="main-header__menu-item">
             <a class="main-header__menu-link" href="form.html">Вязание на заказ</a>
           </li>
+        </ul>
+        <ul class="main-header__user-menu-list">
           <li class="main-header__menu-item">
             <a class="main-header__menu-link" href="#">Поиск по сайту</a>
           </li>
           <li class="main-header__menu-item">
-            <a class="main-header__menu-link" href="#">Корзина: <span class="main-header__cart-content  main-header__cart-content--empty">пока пуста</span></a>
+            <a class="main-header__menu-link" href="#">Корзина: <span class="main-header__cart-content">пока пуста</span></a>
           </li>
         </ul>
+        <ul class="main-header__additional-menu-list">
+          <li class="main-header__menu-item">
+            <a class="main-header__menu-link" href="#">Новые поступления</a>
+          </li>
+          <li class="main-header__menu-item">
+            <a class="main-header__menu-link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <span class="main-header__important-info">Бесплатная доставка по России</span>
       </nav>
     </header>
     <main class="main-content">
@@ -71,21 +85,26 @@
       </aside>
     </main>
     <footer class="main-footer">
-      <ul class="social">
-        <li class="social__item">
-          <a class="social__link  social__link--instagram  visually-hidden" href="#">Инстаграм</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link  social__link--facebook  visually-hidden" href="#">Фейсбук</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link  social__link--twitter  visually-hidden" href="#">Твиттер</a>
-        </li>
-      </ul>
-      <address class="copyright">
-        Разработано
-        <a class="copyright__link  visually-hidden" href="#">HTML Academy</a>
-      </address>
+      <div class="main-footer__container">
+        <a class="main-footer__logo" href="/">
+          <img src="http://placehold.it/86x35" alt="Мишка" width="86" height="35">
+        </a>
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link  social__link--instagram  visually-hidden" href="#">Инстаграм</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link  social__link--facebook  visually-hidden" href="#">Фейсбук</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link  social__link--twitter  visually-hidden" href="#">Твиттер</a>
+          </li>
+        </ul>
+        <address class="copyright">
+          Разработано
+          <a class="copyright__link  visually-hidden" href="#">HTML Academy</a>
+        </address>
+      </div>
     </footer>
     <section class="put-in-cart">
       <h2 class="put-in-cart__heading">Добавить в корзину</h2>

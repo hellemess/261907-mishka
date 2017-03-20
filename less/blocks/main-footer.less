@@ -1,5 +1,30 @@
 .main-footer {
-  .padding();
-
   background: @gray-bg;
+}
+
+.main-footer__container {
+  .container();
+}
+
+.main-footer__logo {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-footer__container {
+    .clearfix();
+  }
+
+  .main-footer__logo {
+    display: block;
+    float: left;
+    width: 100px;
+    margin-right: 120px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-footer__logo {
+    margin-right: 300px;
+  }
 }

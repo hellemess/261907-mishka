@@ -8,13 +8,15 @@
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="page">
+  <body>
     <header class="main-header" id="page-top">
-      <nav class="main-header__main-nav">
+      <nav class="main-header__main-nav  main-header__main-nav--closed  main-header__main-nav--no-js">
         <a class="main-header__logo">
           <img src="http://placehold.it/86x35" alt="Мишка" width="86" height="35">
         </a>
-        <a class="main-header__menu-toggle  main-header__menu-toggle--off  visually-hidden" href="#">Меню</a>
+        <button class="main-header__menu-toggle">
+          <span class="visually-hidden">Меню</span>
+        </button>
         <ul class="main-header__main-menu-list">
           <li class="main-header__menu-item">
             <a class="main-header__menu-link" href="catalog.html">Каталог товаров</a>
@@ -25,7 +27,9 @@
         </ul>
         <ul class="main-header__user-menu-list">
           <li class="main-header__menu-item">
-            <a class="main-header__menu-link" href="#">Поиск по сайту</a>
+            <a class="main-header__menu-link" href="#">
+              <span class="hide-on-tablet-width">Поиск по сайту</span>
+            </a>
           </li>
           <li class="main-header__menu-item">
             <a class="main-header__menu-link" href="#">Корзина: <span class="main-header__cart-content">пока пуста</span></a>
@@ -128,8 +132,12 @@
           </cite>
         </blockquote>
         <div class="feedback__nav">
-          <a class="feedback__prev  visually-hidden" href="#">Предыдущий</a>
-          <a class="feedback__next  visually-hidden" href="#">Следующий</a>
+          <a class="feedback__prev" href="#">
+            <span class="visually-hidden">Предыдущий</span>
+          </a>
+          <a class="feedback__next" href="#">
+            <span class="visually-hidden">Следующий</span>
+          </a>
         </div>
         <a class="btn  btn--bigger-font" href="#">Написать</a>
       </section>
@@ -160,18 +168,26 @@
         </a>
         <ul class="social">
           <li class="social__item">
-            <a class="social__link  social__link--instagram  visually-hidden" href="#">Инстаграм</a>
+            <a class="social__link  social__link--instagram" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link  social__link--facebook  visually-hidden" href="#">Фейсбук</a>
+            <a class="social__link  social__link--facebook" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link  social__link--twitter  visually-hidden" href="#">Твиттер</a>
+            <a class="social__link  social__link--twitter" href="#">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
           </li>
         </ul>
         <address class="copyright">
           Разработано
-          <a class="copyright__link  visually-hidden" href="#">HTML Academy</a>
+          <a class="copyright__link" href="#">
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
         </address>
       </div>
     </footer>
@@ -196,5 +212,6 @@
         <button class="btn  btn--aqua" type="submit">Добавить</button>
       </form>
     </section>
+    <script src="js/script.js" type="application/javascript"></script>
   </body>
 </html>

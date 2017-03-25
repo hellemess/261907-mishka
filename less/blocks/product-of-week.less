@@ -1,15 +1,15 @@
 .product-of-week {
   .container();
 
-  min-height: 796px;
+  padding-top: 29px;
   padding-right: 30px;
+  padding-bottom: 35px;
   padding-left: 30px;
   box-sizing: border-box;
 }
 
 .product-of-week__heading {
   margin: 0;
-  margin-top: 29px;
 
   .bold(25px, black);
 
@@ -21,131 +21,173 @@
 }
 
 .product-of-week__desc {
-  min-height: 70px;
-  margin-top: 20px;
+  margin: 0;
+  margin-top: 15px;
 
   line-height: 1.6;
 }
 
 .product-of-week__features {
-  width: 260px;
-  height: 115px;
-  margin-top: 20px;
+  width: 100%;
+  margin-top: 18px;
+
+  border-collapse: collapse;
+}
+
+.product-of-week__features tr {
+  border-bottom: 1px solid @gray-3;
+}
+
+.product-of-week__features td {
+  padding: 0;
+  padding-top: 4px;
+  padding-bottom: 5px;
+}
+
+.product-of-week__features td:last-child {
+  padding-left: 20px;
 }
 
 .product-of-week__picture {
+  text-align: center;
+}
+
+.product-of-week__picture img {
   width: 260px;
   height: 315px;
-  margin-top: 30px;
+  margin-top: 29px;
 }
 
 .product-of-week__price {
-  margin-top: 10px;
+  margin-top: 9px;
 
   .bold();
+
   text-align: center;
+}
+
+.product-of-week .btn {
+  margin-top: 21px;
 }
 
 @media (min-width: @tablet-width) {
   .product-of-week {
-    position: relative;
-
-    min-height: 580px;
-    margin-top: 50px;
-    padding-left: 0;
+    padding: 0;
+    padding-top: 47px;
+    padding-bottom: 53px;
   }
 
   .product-of-week__header {
-    .clearfix();
+    display: flex;
 
-    margin-top: 40px;
+    justify-content: space-between;
   }
 
   .product-of-week__heading {
-    float: left;
-    width: 425px;
-    min-height: 50px;
-    margin: 0;
+    width: 430px;
+    margin-left: -3px;
+
+    font-size: 43px;
   }
 
   .product-of-week__crossheading {
-    float: right;
-    width: 115px;
+    width: 126px;
+    margin-top: 11px;
 
-    line-height: 1.1;
+    line-height: 1;
     text-align: center;
   }
 
+  .product-of-week__container {
+    position: relative;
+
+    margin-top: 51px;
+    margin-left: -1px;
+    padding-right: 378px;
+  }
+
   .product-of-week__desc {
-    min-height: 81px;
-    margin: 0;
-    margin-right: 350px;
+    font-size: 17px;
+    line-height: 1.8;
   }
 
   .product-of-week__features {
-    width: 290px;
-    margin: 0;
-    margin-top: 38px;
-    margin-right: 350px;
+    margin-top: 36px;
   }
 
-  .product-of-week__picture {
+  .product-of-week__features td:last-child {
+    padding-left: 2px;
+  }
+
+  .product-of-week__picture img {
     position: absolute;
-    top: 70px;
+    top: -21px;
     right: 0;
 
-    width: 334px;
+    width: 333px;
     height: 404px;
   }
 
   .product-of-week__price {
-    margin-top: 65px;
-    margin-right: 350px;
+    margin-top: 48px;
+    margin-left: 7px;
+
+    font-size: 20px;
   }
 
   .product-of-week .btn {
-    margin-right: 350px;
+    margin-top: 26px;
+    padding-left: 7px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .product-of-week {
-    width: 700px;
-    min-height: 684px;
+    padding-top: 126px;
+    padding-bottom: 73px;
   }
 
   .product-of-week__header {
-    position: relative;
-    z-index: 1;
+    width: 699px;
+  }
 
-    width: 698px;
-    margin-top: 130px;
+  .product-of-week__heading {
+    width: 529px;
+
+    order: 1;
+
+    font-size: 53px;
   }
 
   .product-of-week__crossheading {
-    position: absolute;
-    left: -180px;
+    margin-top: 16px;
+    margin-left: 19px;
+  }
+
+  .product-of-week__container {
+    margin-top: 47px;
+    margin-left: 175px;
+    padding-right: 583px;
   }
 
   .product-of-week__features {
-    margin-top: 60px;
-    margin-right: 510px;
+    margin-top: 51px;
   }
 
-  .product-of-week__picture {
-    top: -80px;
-    right: -175px;
+  .product-of-week__features td {
+    padding-top: 2px;
+    padding-bottom: 7px;
+  }
+
+  .product-of-week__picture img {
+    top: -186px;
+    z-index: -1;
 
     width: 525px;
     height: 636px;
   }
 
   .product-of-week__price {
-    margin-top: 115px;
-    margin-right: 510px;
-  }
-
-  .product-of-week .btn {
-    margin-right: 510px;
+    margin-top: 100px;
   }
 }

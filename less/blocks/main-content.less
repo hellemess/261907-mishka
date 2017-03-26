@@ -27,6 +27,22 @@
   line-height: 1.8;
 }
 
+.main-content__dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: none;
+  width: 100vw;
+  height: 100vh;
+
+  background: fade(white, 90%);
+
+  &--show {
+    display: block;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .main-content__heading {
 

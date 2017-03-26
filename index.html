@@ -202,27 +202,32 @@
         </address>
       </div>
     </footer>
-    <section class="put-in-cart">
-      <h2 class="put-in-cart__heading">Добавить в корзину</h2>
-      <form class="put-in-cart__choose-size" action="https://echo.htmlacademy.ru/" method="post">
-        <p>Выберите размер:</p>
-        <ul class="put-in-cart__list">
-          <li class="put-in-cart__item">
-            <input type="radio" name="size" id="s" value="s" checked>
-            <label class="put-in-cart__size" for="s">S</label>
-          </li>
-          <li class="put-in-cart__item">
-            <input type="radio" name="size" id="m" value="m">
-            <label class="put-in-cart__size" for="m">M</label>
-          </li>
-          <li class="put-in-cart__item">
-            <input type="radio" name="size" id="l" value="l">
-            <label class="put-in-cart__size" for="l">L</label>
-          </li>
-        </ul>
-        <button class="btn  btn--aqua" type="submit">Добавить</button>
-      </form>
-    </section>
+    <div class="main-content__dialog">
+      <section class="put-in-cart">
+        <h2 class="put-in-cart__heading">
+          Добавить<br>
+          в корзину
+        </h2>
+        <form class="put-in-cart__choose-size" action="https://echo.htmlacademy.ru/" method="post">
+          <p>Выберите размер:</p>
+          <ul class="put-in-cart__list">
+            <li class="put-in-cart__item">
+              <input class="put-in-cart__input" type="radio" name="size" id="s" value="s" checked>
+              <label class="put-in-cart__size" for="s">S</label>
+            </li>
+            <li class="put-in-cart__item">
+              <input class="put-in-cart__input" type="radio" name="size" id="m" value="m">
+              <label class="put-in-cart__size" for="m">M</label>
+            </li>
+            <li class="put-in-cart__item">
+              <input class="put-in-cart__input" type="radio" name="size" id="l" value="l">
+              <label class="put-in-cart__size" for="l">L</label>
+            </li>
+          </ul>
+          <button class="btn  btn--aqua" type="submit">Добавить</button>
+        </form>
+      </section>
+    </div>
     <script src="js/script.js" type="application/javascript"></script>
   </body>
 </html>

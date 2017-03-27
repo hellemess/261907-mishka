@@ -1,10 +1,24 @@
 .social {
   .reset-list();
+
+  display: flex;
+  padding-bottom: 10px;
+
+  justify-content: center;
+
+  border-bottom: 1px solid @gray-4;
+}
+
+.social__link {
+  display: block;
+  width: 60px;
+  height: 60px;
 }
 
 @media (min-width: @tablet-width) {
   .social {
-    float: left;
-    width: 200px;
+    margin-left: 81px;
+    padding: 0;
+    border: none;
   }
 }

@@ -1,8 +1,7 @@
 .btn {
   display: block;
-  margin-top: 20px;
   padding-top: 8px;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 
   font: inherit;
 
@@ -26,23 +25,32 @@
   }
 
   &--bigger-font {
+    padding-top: 6px;
+
     font-size: 18px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 8px;
+
+      font-size: 17px;
+    }
   }
 
   &--aqua {
     color: white;
-    background: @aqua;
-    border-color: @aqua;
+    background: @aqua-1;
+    border-color: @aqua-1;
 
     &:hover {
-      background: @dark-aqua;
-      border-color: @dark-aqua;
+      color: @aqua-1;
+      background: white;
+      border-color: @aqua-1;
     }
 
     &:active {
-      color: fade(white, 30%);
-      background: @dark-aqua;
-      border-color: @dark-aqua;
+      color: fade(@aqua-1, 30%);
+      background: white;
+      border-color: @aqua-1;
     }
   }
 }

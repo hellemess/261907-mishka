@@ -6,19 +6,19 @@
   line-height: 1.1;
   text-align: center;
 
-  background: @gray-bg;
+  background: @gray-2;
 
   &--index {
-    padding-top: 73px;
-    padding-right: 20%;
-    padding-bottom: 127px;
-    padding-left: 20%;
+    padding-top: 70px;
+    padding-right: 11%;
+    padding-bottom: 125px;
+    padding-left: 11%;
 
-    background: @light-gray url("../img/hero-mobile@1x.jpg") no-repeat 50% -15px;
+    background: @gray-1 url("../img/hero-mobile@1x.jpg") no-repeat 50% -18px;
   }
 
   &--form {
-    color: @dark-gray;
+    color: @gray-6;
   }
 }
 
@@ -27,19 +27,33 @@
   line-height: 1.8;
 }
 
+.main-content__dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: none;
+  width: 100vw;
+  height: 100vh;
+
+  background: fade(white, 90%);
+
+  &--show {
+    display: block;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .main-content__heading {
 
     &--index {
       padding-top: 152px;
-      padding-right: 0;
-      padding-bottom: 495px;
-      padding-left: 0;
+      padding-bottom: 490px;
 
       font-size: 43px;
       line-height: 1.2;
 
-      background: @light-gray url("../img/hero-desktop.jpg") no-repeat 50% 0;
+      background: @gray-1 url("../img/hero-desktop.jpg") no-repeat 50% -1px;
     }
   }
 }
@@ -49,7 +63,7 @@
 
     &--index {
       padding-top: 154px;
-      padding-bottom: 478px;
+      padding-bottom: 472px;
 
       font-size: 53px;
       line-height: 1.1;

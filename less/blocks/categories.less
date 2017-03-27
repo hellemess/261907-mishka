@@ -5,14 +5,22 @@
 
 .categories__link {
   display: block;
-  padding-top: 24px;
+  padding-top: 25px;
   padding-bottom: 30px;
-  padding-left: 28px;
+  padding-left: 29px;
 
   .bold(19px, white);
 
   line-height: 1.3;
   text-decoration: none;
+
+  &--accessories {
+    background: @aqua-1;
+  }
+
+  &--toys {
+    background: @aqua-2;
+  }
 
   &:hover {
     margin-top: -5px;
@@ -22,37 +30,38 @@
   &:active {
     color: fade(white, 30%);
   }
-
-  &--accessories {
-    background: @aqua;
-  }
-
-  &--toys {
-    background: @dark-aqua;
-  }
 }
 
 @media (min-width: @tablet-width) {
   .categories {
-    margin-top: -120px;
-
-    .clearfix();
+    display: flex;
+    margin-top: -118px;
   }
 
   .categories__item {
-    float:left;
     width: 50%;
   }
 
   .categories__link {
-    padding-top: 27px;
-    padding-bottom: 35px;
+    padding-top: 28px;
     padding-left: 36px;
 
+    font-size: 20px;
     line-height: 1.5;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .categories {
+    margin-top: -116px;
+  }
+
+  .categories__link {
+    padding-left: 38px;
+    padding-bottom: 28px;
 
     &:hover {
-      padding-bottom: 40px;
+      padding-bottom: 33px;
     }
   }
 }

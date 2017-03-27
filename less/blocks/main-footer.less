@@ -1,9 +1,15 @@
 .main-footer {
-  background: @gray-bg;
+  background: @gray-2;
 }
 
 .main-footer__container {
   .container();
+
+  padding-top: 11px;
+  padding-right: 30px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  box-sizing: border-box;
 }
 
 .main-footer__logo {
@@ -12,19 +18,21 @@
 
 @media (min-width: @tablet-width) {
   .main-footer__container {
-    .clearfix();
+    display: flex;
+    padding: 0;
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    justify-content: space-between;
+    align-items: center;
   }
 
   .main-footer__logo {
     display: block;
-    float: left;
-    width: 100px;
-    margin-right: 120px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .main-footer__logo {
-    margin-right: 300px;
+  .main-footer__logo img {
+    width: 102px;
+    height: 34px;
   }
 }

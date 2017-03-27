@@ -1,24 +1,37 @@
 .feedback {
   .container();
 
-  min-height: 645px;
+  padding-top: 38px;
   padding-right: 30px;
+  padding-bottom: 44px;
   padding-left: 30px;
   box-sizing: border-box;
 }
 
 .feedback__heading {
   margin: 0;
-  margin-top: 20px;
+  margin-left: -2px;
 
   .bold(25px, black);
 }
 
 .feedback__item {
   margin: 0;
+  margin-top: 14px;
+}
+
+.feedback__quote {
+  margin: 0;
+}
+
+.feedback__quote br {
+  display: none;
 }
 
 .feedback__source {
+  display: block;
+  margin-top: 24px;
+
   font-style: normal;
   font-size: 17px;
   line-height: 1.8;
@@ -31,36 +44,119 @@
   color: black;
 }
 
+.feedback__nav {
+  display: flex;
+  margin-top: 29px;
+
+  border: 1px solid @gray-3;
+}
+
+.feedback__nav-link {
+  display: block;
+  width: 50%;
+  height: 50px;
+
+  &--next {
+    border-left: 1px solid @gray-3;
+  }
+}
+
+.feedback .btn {
+  margin-top: 38px;
+}
+
 @media (min-width: @tablet-width) {
   .feedback {
-    position: relative;
-
-    .clearfix();
-
+    display: flex;
     width: 768px;
-    min-height: 454px;
-    margin-top: 30px;
-    padding-top: 58px;
+    padding-top: 116px;
+    padding-right: 50px;
+    padding-bottom: 85px;
     padding-left: 50px;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    background: transparent url('../img/review.jpg') no-repeat 0 57px;
+  }
+
+  .feedback__heading {
+    margin-left: -5px;
+
+    font-size: 43px;
+  }
+
+  .feedback__item {
+    margin-top: 31px;
+
+    order: 1;
+  }
+
+  .feedback__quote {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .feedback__source {
+    margin-top: 55px;
+  }
+
+  .feedback__source b {
+    font-size: 17px;
+    line-height: 1.4;
   }
 
   .feedback__nav {
-    float: right;
-    width: 200px;
-    margin-top: -58px;
+    width: 173px;
+    margin-left: auto;
+
+    order: 2;
+
+    border: none;
+  }
+
+  .feedback__nav-link {
+    margin-top: -82px;
+
+    &--next {
+      border: none;
+    }
   }
 
   .feedback .btn {
-    position: absolute;
-    top: 57px;
-    right: 51px;
+    width: 171px;
+    margin-top: 20px;
+    margin-bottom: auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .feedback {
     width: 1050px;
+    padding-top: 103px;
     padding-right: 0;
+    padding-bottom: 132px;
     padding-left: 176px;
+  }
+
+  .feedback__heading {
+    font-size: 53px;
+  }
+
+  .feedback__item {
+    width: 775px;
+    margin-top: 24px;
+  }
+
+  .feedback__quote br {
+    display: inline;
+  }
+
+  .feedback__source {
+    margin-top: 36px;
+  }
+
+  .feedback .btn {
+    margin-top: 33px;
   }
 }

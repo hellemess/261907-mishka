@@ -3,18 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta
-      viewport="viewport"
-      content="width=device-width, initial-scale=1.0">
+      name="viewport"
+      content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="page">
+  <body>
     <header class="main-header" id="page-top">
-      <nav class="main-header__main-nav">
+      <nav class="main-header__main-nav  main-header__main-nav--closed  main-header__main-nav--no-js">
         <a class="main-header__logo">
           <img src="http://placehold.it/86x35" alt="Мишка" width="86" height="35">
         </a>
-        <a class="main-header__menu-toggle  main-header__menu-toggle--off  visually-hidden" href="#">Меню</a>
+        <button class="main-header__menu-toggle">
+          <span class="visually-hidden">Меню</span>
+        </button>
         <ul class="main-header__main-menu-list">
           <li class="main-header__menu-item">
             <a class="main-header__menu-link" href="catalog.html">Каталог товаров</a>
@@ -25,7 +27,9 @@
         </ul>
         <ul class="main-header__user-menu-list">
           <li class="main-header__menu-item">
-            <a class="main-header__menu-link" href="#">Поиск по сайту</a>
+            <a class="main-header__menu-link" href="#">
+              <span class="hide-on-tablet-width">Поиск по сайту</span>
+            </a>
           </li>
           <li class="main-header__menu-item">
             <a class="main-header__menu-link" href="#">Корзина: <span class="main-header__cart-content">пока пуста</span></a>
@@ -61,75 +65,86 @@
           </a>
         </li>
       </ul>
-      <div class="main-content__decorated-block main-content__decorated-block--wavy-top-and-bottom">
+      <div class="main-content__decorated-block  main-content__decorated-block--white-waves">
         <section class="product-of-week">
           <header class="product-of-week__header">
             <h2 class="product-of-week__heading">Вязаные корзинки</h2>
             <span class="product-of-week__crossheading">Товар недели</span>
           </header>
-          <p class="product-of-week__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-          <table class="product-of-week__features">
-            <tr>
-              <td>Цвет:</td>
-              <td>«Тиффани»/серый</td>
-            </tr>
-            <tr>
-              <td>Диаметр:</td>
-              <td>25 см</td>
-            </tr>
-            <tr>
-              <td>Высота:</td>
-              <td>15 см</td>
-            </tr>
-          </table>
-          <img class="product-of-week__picture" src="http://placehold.it/260x315" alt="Вязаные корзинки" width="260" height="315">
-          <div class="product-of-week__price">Цена: 990 руб.</div>
-          <a class="btn" href="#">Заказать</a>
+          <div class="product-of-week__container">
+            <p class="product-of-week__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <table class="product-of-week__features">
+              <tr>
+                <td>Цвет:</td>
+                <td>«Тиффани»/серый</td>
+              </tr>
+              <tr>
+                <td>Диаметр:</td>
+                <td>25 см</td>
+              </tr>
+              <tr>
+                <td>Высота:</td>
+                <td>15 см</td>
+              </tr>
+            </table>
+            <div class="product-of-week__picture">
+              <img src="http://placehold.it/260x315" alt="Вязаные корзинки" width="260" height="315">
+            </div>
+            <div class="product-of-week__price">Цена: 990 руб.</div>
+            <a class="btn" href="#">Заказать</a>
+          </div>
         </section>
       </div>
-      <section class="features">
-        <h2 class="features__heading">Коротко о нас:</h2>
-        <ul class="features__list  features__list--left">
-          <li class="features__item  features__item--eco-friendly">
-            Экологически<br>
-            чистые материалы
-          </li>
-          <li class="features__item  features__item--low-cost">
-            Скандинавский стиль<br>
-            по российской цене
-          </li>
-          <li class="features__item  features__item--likable">
-            Увеличивает лайки<br>
-            на фотографиях
-          </li>
-        </ul>
-        <ul class="features__list  features__list--right">
-          <li class="features__item  features__item--handmade">
-            Связано вручную с<br>
-            любовью и умилением
-          </li>
-          <li class="features__item  features__item--patriotic">
-            Поддержка отечественного<br>
-            производителя
-          </li>
-          <li class="features__item  features__item--gift-wrapped">
-            Поставляется в<br>
-            подарочной упаковке
-          </li>
-        </ul>
-      </section>
+      <div class="main-content__decorated-block  main-content__decorated-block--gray-waves">
+        <section class="features">
+          <h2 class="features__heading">Коротко о нас:</h2>
+          <ul class="features__list">
+            <li class="features__item  features__item--eco-friendly">
+              Экологически<br>
+              чистые материалы
+            </li>
+            <li class="features__item  features__item--low-cost">
+              Скандинавский стиль<br>
+              по российской цене
+            </li>
+            <li class="features__item  features__item--likable">
+              Увеличивает лайки<br>
+              на фотографиях
+            </li>
+            <li class="features__item  features__item--handmade">
+              Связано вручную с<br>
+              любовью и умилением
+            </li>
+            <li class="features__item  features__item--patriotic">
+              Поддержка отечественного<br>
+              производителя
+            </li>
+            <li class="features__item  features__item--gift-wrapped">
+              Поставляется в<br>
+              подарочной упаковке
+            </li>
+          </ul>
+        </section>
+      </div>
       <section class="feedback">
         <h2 class="feedback__heading">Отзывы</h2>
         <blockquote class="feedback__item">
-          <p class="feedback__quote">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+          <p class="feedback__quote">
+            Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,<br>
+            и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+          </p>
           <cite class="feedback__source">
             <b>Анастасия Красильникова</b><br>
             @misssssiskras
           </cite>
         </blockquote>
         <div class="feedback__nav">
-          <a class="feedback__prev  visually-hidden" href="#">Предыдущий</a>
-          <a class="feedback__next  visually-hidden" href="#">Следующий</a>
+          <a class="feedback__nav-link  feedback__nav-link--prev" href="#">
+            <span class="visually-hidden">Предыдущий</span>
+          </a>
+          <a class="feedback__nav-link  feedback__nav-link--next" href="#">
+            <span class="visually-hidden">Следующий</span>
+          </a>
         </div>
         <a class="btn  btn--bigger-font" href="#">Написать</a>
       </section>
@@ -145,7 +160,11 @@
             </tr>
             <tr>
               <td>адрес:</td>
-              <td>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+              <td>
+                г. Санкт-Петербург,<br>
+                ул. Большая Конюшенная,<br>
+                д. 19/8, офис 101
+              </td>
             </tr>
           </table>
           <iframe class="contacts__map" src="https://api-maps.yandex.ru/frame/v1/-/C6ACiYL5"></iframe>
@@ -160,41 +179,55 @@
         </a>
         <ul class="social">
           <li class="social__item">
-            <a class="social__link  social__link--instagram  visually-hidden" href="#">Инстаграм</a>
+            <a class="social__link  social__link--instagram" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link  social__link--facebook  visually-hidden" href="#">Фейсбук</a>
+            <a class="social__link  social__link--facebook" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link  social__link--twitter  visually-hidden" href="#">Твиттер</a>
+            <a class="social__link  social__link--twitter" href="#">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
           </li>
         </ul>
         <address class="copyright">
           Разработано
-          <a class="copyright__link  visually-hidden" href="#">HTML Academy</a>
+          <a class="copyright__link" href="#">
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
         </address>
       </div>
     </footer>
-    <section class="put-in-cart">
-      <h2 class="put-in-cart__heading">Добавить в корзину</h2>
-      <form class="put-in-cart__choose-size" action="https://echo.htmlacademy.ru/" method="post">
-        <p>Выберите размер:</p>
-        <ul class="put-in-cart__list">
-          <li class="put-in-cart__item">
-            <input type="radio" name="size" id="s" value="s" checked>
-            <label class="put-in-cart__size" for="s">S</label>
-          </li>
-          <li class="put-in-cart__item">
-            <input type="radio" name="size" id="m" value="m">
-            <label class="put-in-cart__size" for="m">M</label>
-          </li>
-          <li class="put-in-cart__item">
-            <input type="radio" name="size" id="l" value="l">
-            <label class="put-in-cart__size" for="l">L</label>
-          </li>
-        </ul>
-        <button class="btn  btn--aqua" type="submit">Добавить</button>
-      </form>
-    </section>
+    <div class="main-content__dialog">
+      <section class="put-in-cart">
+        <h2 class="put-in-cart__heading">
+          Добавить<br>
+          в корзину
+        </h2>
+        <form class="put-in-cart__choose-size" action="https://echo.htmlacademy.ru/" method="post">
+          <p>Выберите размер:</p>
+          <ul class="put-in-cart__list">
+            <li class="put-in-cart__item">
+              <input class="put-in-cart__input" type="radio" name="size" id="s" value="s" checked>
+              <label class="put-in-cart__size" for="s">S</label>
+            </li>
+            <li class="put-in-cart__item">
+              <input class="put-in-cart__input" type="radio" name="size" id="m" value="m">
+              <label class="put-in-cart__size" for="m">M</label>
+            </li>
+            <li class="put-in-cart__item">
+              <input class="put-in-cart__input" type="radio" name="size" id="l" value="l">
+              <label class="put-in-cart__size" for="l">L</label>
+            </li>
+          </ul>
+          <button class="btn  btn--aqua" type="submit">Добавить</button>
+        </form>
+      </section>
+    </div>
+    <script src="js/script.js" type="application/javascript"></script>
   </body>
 </html>

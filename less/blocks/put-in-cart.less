@@ -14,7 +14,7 @@
   transform: translate(-50%, -50%);
 
   background: white;
-  border: 1px solid @gray-5;
+  border: 1px solid @gray-6;
   box-shadow: 0 5px 10px 0 fade(black, 25%);
 }
 
@@ -59,10 +59,14 @@
   text-align: center;
 
   border: 2px solid @gray-3;
+
+  &:hover {
+    border-color: @gray-5;
+  }
 }
 
 .put-in-cart__input:checked + .put-in-cart__size {
-  border-color: @aqua-1;
+  border-color: @aqua-2;
 }
 
 .put-in-cart .btn {

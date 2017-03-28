@@ -48,45 +48,53 @@
     </header>
     <main class="main-content">
       <h1 class="main-content__heading">Каталог товаров</h1>
-      <article class="product">
-        <img class="product__picture" src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик" width="260" height="195">
-        <section class="product__info">
-          <h2 class="product__heading">Зайчик-попрыгайчик</h2>
-          <p class="product__desc">Рост 30 см, вес 200 г</p>
-          <section class="product__buy">
-            <span class="product__price">1 200 руб.</span>
-            <a  class="product__cart" href="#">
-              <span class="visually-hidden">В корзину</span>
-            </a>
+      <div class="main-content__container">
+        <article class="product">
+          <img class="product__picture" src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик" width="260" height="195">
+          <section class="product__info">
+            <h2 class="product__heading">
+              <a href="#">Зайчик-попрыгайчик</a>
+            </h2>
+            <p class="product__desc">Рост 30 см, вес 200 г</p>
+            <section class="product__buy">
+              <span class="product__price">1 200 руб.</span>
+              <a  class="product__cart" href="#">
+                <span class="visually-hidden">В корзину</span>
+              </a>
+            </section>
           </section>
-        </section>
-      </article>
-      <article class="product">
-        <img class="product__picture" src="http://placehold.it/260x195" alt="Корзинка для белья" width="260" height="195">
-        <section class="product__info">
-          <h2 class="product__heading">Корзинка для белья</h2>
-          <p class="product__desc">Диаметр 15 см, высота 10 см</p>
-          <section class="product__buy">
-            <span class="product__price">690 руб.</span>
-            <a  class="product__cart" href="#">
-              <span class="visually-hidden">В корзину</span>
-            </a>
-          </section>
-        </section>
-      </article>
-      <article class="product">
-        <img class="product__picture" src="http://placehold.it/260x195" alt="Большая корзинка для игрушек" width="260" height="195">
-        <section class="product__info">
-          <h2 class="product__heading">Большая корзинка для игрушек</h2>
-          <p class="product__desc">Диаметр 30 см, высота 30 см</p>
-          <section class="product__buy">
-            <span class="product__price">1 500 руб.</span>
-            <a  class="product__cart" href="#">
-              <span class="visually-hidden">В корзину</span>
-            </a>
-          </section>
-        </section>
         </article>
+        <article class="product">
+          <img class="product__picture" src="http://placehold.it/260x195" alt="Корзинка для белья" width="260" height="195">
+          <section class="product__info">
+            <h2 class="product__heading">
+              <a href="#">Корзинка для белья</a>
+            </h2>
+            <p class="product__desc">Диаметр 15 см, высота 10 см</p>
+            <section class="product__buy">
+              <span class="product__price">690 руб.</span>
+              <a  class="product__cart" href="#">
+                <span class="visually-hidden">В корзину</span>
+              </a>
+            </section>
+          </section>
+        </article>
+        <article class="product">
+          <img class="product__picture" src="http://placehold.it/260x195" alt="Большая корзинка для игрушек" width="260" height="195">
+          <section class="product__info">
+            <h2 class="product__heading">
+              <a href="#">Большая корзинка для игрушек</a>
+            </h2>
+            <p class="product__desc">Диаметр 30 см, высота 30 см</p>
+            <section class="product__buy">
+              <span class="product__price">1 500 руб.</span>
+              <a  class="product__cart" href="#">
+                <span class="visually-hidden">В корзину</span>
+              </a>
+            </section>
+          </section>
+        </article>
+      </div>
       <aside class="production-process">
         <h2 class="production-process__heading">Процесс производства</h2>
         <div class="production-process__video"></div>
@@ -124,26 +132,32 @@
         </address>
       </div>
     </footer>
-    <section class="put-in-cart">
-      <h2 class="put-in-cart__heading">Добавить в корзину</h2>
-      <form class="put-in-cart__choose-size" action="https://echo.htmlacademy.ru/" method="post">
-        <p>Выберите размер:</p>
-        <ul class="put-in-cart__list">
-          <li class="put-in-cart__item">
-            <input type="radio" name="size" id="s" value="s" checked>
-            <label class="put-in-cart__size" for="s">S</label>
-          </li>
-          <li class="put-in-cart__item">
-            <input type="radio" name="size" id="m" value="m">
-            <label class="put-in-cart__size" for="m">M</label>
-          </li>
-          <li class="put-in-cart__item">
-            <input type="radio" name="size" id="l" value="l">
-            <label class="put-in-cart__size" for="l">L</label>
-          </li>
-        </ul>
-        <button class="btn  btn--aqua" type="submit">Добавить</button>
-      </form>
-    </section>
+    <div class="main-content__dialog">
+      <section class="put-in-cart">
+        <h2 class="put-in-cart__heading">
+          Добавить<br>
+          в корзину
+        </h2>
+        <form class="put-in-cart__choose-size" action="https://echo.htmlacademy.ru/" method="post">
+          <p>Выберите размер:</p>
+          <ul class="put-in-cart__list">
+            <li class="put-in-cart__item">
+              <input class="put-in-cart__input" type="radio" name="size" id="s" value="s" checked>
+              <label class="put-in-cart__size" for="s">S</label>
+            </li>
+            <li class="put-in-cart__item">
+              <input class="put-in-cart__input" type="radio" name="size" id="m" value="m">
+              <label class="put-in-cart__size" for="m">M</label>
+            </li>
+            <li class="put-in-cart__item">
+              <input class="put-in-cart__input" type="radio" name="size" id="l" value="l">
+              <label class="put-in-cart__size" for="l">L</label>
+            </li>
+          </ul>
+          <button class="btn  btn--aqua" type="submit">Добавить</button>
+        </form>
+      </section>
+    </div>
+    <script src="js/mobile-menu.js" type="application/javascript"></script>
   </body>
 </html>

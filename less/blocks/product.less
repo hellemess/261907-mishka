@@ -77,6 +77,10 @@
     margin-top: 54px;
   }
 
+  .product:first-child {
+    margin-top: 83px;
+  }
+
   .product__picture {
     width: 334px;
     height: 334px;
@@ -142,9 +146,13 @@
 
 @media (min-width: @desktop-width) {
   .product {
-    margin: 0;
+    margin-top: 131px;
 
     flex-direction: column;
+  }
+
+  .product:first-child {
+    margin-top: 131px;
   }
 
   .product__picture {
@@ -155,6 +163,7 @@
   .product__info {
     width: 316px;
     min-height: inherit;
+    padding-bottom: 20px;
 
     flex-grow: 1;
   }

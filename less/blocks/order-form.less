@@ -1,18 +1,58 @@
 .order-form {
-
+  margin-top: 31px;
+  padding-bottom: 55px;
 }
 
 .order-form__section {
+  margin: 0;
+  padding: 0;
+
   border: none;
-  border-top: 1px solid @aqua;
+
+  &--color {
+    margin-top: 20px;
+  }
+
+  &--name {
+    margin-top: 18px;
+  }
+
+  &--phone-number {
+    margin-top: 39px;
+  }
+
+  &--email,
+  &--more-info {
+    margin-top: 37px;
+  }
+}
+
+.order-form__section-container {
+  .container();
+
+  width: 260px;
+
+  border-top: 1px solid @aqua-2;
 }
 
 .order-form__section-heading {
+  margin-top: -17px;
+  padding: 0;
+  padding-right: 26px;
+
   .aqua-heading();
+
+  background: white;
 }
 
 .order-form__list {
   .reset-list();
+
+  margin-top: 15px;
+}
+
+.order-form__input {
+  display: none;
 }
 
 .order-form__radio,
@@ -23,10 +63,114 @@
   line-height: 1.1;
 }
 
+.order-form__radio,
+.order-form__checkbox {
+  position: relative;
+
+  display: block;
+  min-height: 35px;
+  margin-bottom: 15px;
+  padding-top: 9px;
+  padding-left: 63px;
+
+  &:hover::before {
+    border-color: @aqua-2;
+  }
+
+  &:active::before {
+    border-color: @gray-5;
+  }
+}
+
+.order-form__radio::before,
+.order-form__radio::after,
+.order-form__checkbox::before,
+.order-form__checkbox::after {
+  content: "";
+
+  position: absolute;
+}
+
+.order-form__radio::before,
+.order-form__checkbox::before {
+  top: 0;
+  left: 0;
+
+  width: 36px;
+
+  border: 2px solid @main-color;
+}
+
+.order-form__radio::before {
+  height: 36px;
+
+  border-radius: 50%;
+}
+
+.order-form__radio::after {
+  top: 12px;
+  left: 12px;
+
+  display: none;
+  width: 16px;
+  height: 16px;
+
+  background: @aqua-2;
+  border-radius: 50%;
+}
+
+.order-form__input:checked + .order-form__radio::after {
+  display: block;
+}
+
+.order-form__checkbox {
+  padding-top: 11px;
+}
+
+.order-form__checkbox::before {
+  height: 35px;
+}
+
+.order-form__checkbox::after {
+  top: 13px;
+  left: 10px;
+
+  display: none;
+  width: 19px;
+  height: 7px;
+
+  transform: rotate(-45deg);
+
+  border-left: 2px solid @main-color;
+  border-bottom: 2px solid @main-color;
+}
+
+.order-form__input:checked + .order-form__checkbox::after {
+  display: block;
+}
+
+.order-form__label {
+  display: block;
+  margin-top: 22px;
+
+  line-height: 1;
+}
+
 .order-form__field,
 .order-form__textarea {
+  display: block;
+  width: 100%;
+
   font: inherit;
+  font-size: 17px;
   line-height: 1.1;
+
+  border: none;
+
+  &:hover,
+  &:focus {
+    border-color: @aqua-2;
+  }
 }
 
 .order-form__field:-moz-placeholder,
@@ -49,6 +193,117 @@
   color: fade(@main-color, 30%);
 }
 
+.order-form__field {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  border-bottom: 2px solid @main-color;
+}
+
+.order-form__textarea {
+  min-height: 142px;
+  margin-top: 15px;
+  padding: 14px;
+  box-sizing: border-box;
+  resize: none;
+
+  border: 2px solid @main-color;
+}
+
 .order-form__comment {
+  width: 260px;
+  margin: 0 auto;
+  margin-top: 10px;
+
   font-size: 14px;
+}
+
+.order-form .btn {
+  .container();
+
+  width: 260px;
+  margin-top: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form {
+    margin-top: 7px;
+  }
+
+  .order-form__section {
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 26px;
+
+    &--color,
+    &--phone-number,
+    &--email {
+      background: @gray-2;
+    }
+  }
+
+  .order-form__section-container {
+    display: flex;
+
+    border: none;
+  }
+
+  .order-form__section-heading {
+    width: 167px;
+    margin-top: 8px;
+    padding: 0;
+
+    flex-shrink: 0;
+
+    background: transparent;
+  }
+
+  .order-form__list {
+    display: flex;
+    margin: 0;
+
+    flex-wrap: wrap;
+  }
+
+  .order-form__radio,
+  .order-form__checkbox,
+  .order-form__label {
+    font-size: 19px;
+  }
+
+  .order-form__radio,
+  .order-form__checkbox {
+    margin-bottom: 26px;
+    padding-top: 15px;
+    padding-left: 81px;
+  }
+
+  .order-form__radio::before,
+  .order-form__checkbox::before {
+    height: 48px;
+  }
+
+  .order-form__radio::before {
+    width: 48px;
+  }
+
+  .order-form__radio::after {
+    top: 16px;
+    left: 16px;
+
+    width: 21px;
+    height: 21px;
+  }
+
+  .order-form__checkbox {
+    width: 181px;
+  }
+
+  .order-form__item:nth-child(2n) .order-form__checkbox {
+    width: 150px;
+  }
+
+  .order-form__checkbox::before {
+    width: 50px;
+  }
 }

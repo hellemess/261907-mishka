@@ -16,23 +16,35 @@
 
   &--accessories {
     background: @aqua-2;
+
+    &:hover {
+      background: @aqua-1;
+    }
+
+    &:active {
+      background: @aqua-1;
+    }
   }
 
   &--toys {
     background: @aqua-3;
+
+    &:hover {
+      background: @aqua-4;
+    }
+
+    &:active {
+      background: @aqua-4;
+    }
   }
 
   &:hover {
     margin-top: -5px;
     padding-bottom: 35px;
-
-    background: @aqua-1;
   }
 
   &:active {
     color: fade(white, 30%);
-
-    background: @aqua-4;
   }
 }
 

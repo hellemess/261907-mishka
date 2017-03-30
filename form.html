@@ -50,8 +50,8 @@
       <h1 class="main-content__heading main-content__heading--form">Вязание на заказ</h1>
       <p class="main-content__desc">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="order-form__section  order-form__section--type">
-          <div class="order-form__section-container">
+        <fieldset class="order-form__section">
+          <div class="order-form__container  order-form__container--type">
             <legend class="order-form__section-heading">Тип</legend>
             <ul class="order-form__list">
               <li class="order-form__item">
@@ -65,8 +65,8 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset class="order-form__section  order-form__section--color">
-          <div class="order-form__section-container">
+        <fieldset class="order-form__section">
+          <div class="order-form__container  order-form__container--color">
             <legend class="order-form__section-heading">Цвет</legend>
             <ul class="order-form__list">
               <li class="order-form__item">
@@ -96,43 +96,45 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset class="order-form__section  order-form__section--name">
-          <div class="order-form__section-container">
+        <fieldset class="order-form__section">
+          <div class="order-form__container  order-form__container--name">
             <legend class="order-form__section-heading">ФИО</legend>
-            <label class="order-form__label" for="name">Имя:</label>
-            <input class="order-form__field" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
-            <label class="order-form__label" for="last-name">Фамилия:</label>
-            <input class="order-form__field" type="text" name="last-name" id="last-name" placeholder="Укажите фамилию*" required>
-            <label class="order-form__label" for="patronym">Отчество:</label>
-            <input class="order-form__field" type="text" name="patronym" id="patronym" placeholder="Отчество, если желаете">
+            <label class="order-form__label  order-form__label--name" for="name">Имя:</label>
+            <input class="order-form__field  order-form__field--name" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+            <label class="order-form__label  order-form__label--last-name" for="last-name">Фамилия:</label>
+            <input class="order-form__field  order-form__field--last-name" type="text" name="last-name" id="last-name" placeholder="Укажите фамилию*" required>
+            <label class="order-form__label  order-form__label--patronym" for="patronym">Отчество:</label>
+            <input class="order-form__field  order-form__field--patronym" type="text" name="patronym" id="patronym" placeholder="Отчество, если желаете">
           </div>
         </fieldset>
-        <fieldset class="order-form__section  order-form__section--phone-number">
-          <div class="order-form__section-container">
+        <fieldset class="order-form__section">
+          <div class="order-form__container  order-form__container--phone-number">
             <legend class="order-form__section-heading">
               <label for="phone-number">Тел</label>
             </legend>
-            <input class="order-form__field" type="tel" name="phone-number" id="phone-number" placeholder="+7 XXX XX XX*" required>
+            <input class="order-form__field  order-form__field--phone-number" type="tel" name="phone-number" id="phone-number" placeholder="+7 XXX XX XX*" required>
           </div>
         </fieldset>
-        <fieldset class="order-form__section  order-form__section--email">
-          <div class="order-form__section-container">
+        <fieldset class="order-form__section">
+          <div class="order-form__container  order-form__container--email">
             <legend class="order-form__section-heading">
               <label for="email">E-mail</label>
             </legend>
-            <input class="order-form__field" type="email" name="email" id="email" placeholder="Ваш Email*" required>
+            <input class="order-form__field  order-form__field--email" type="email" name="email" id="email" placeholder="Ваш Email*" required>
           </div>
         </fieldset>
-        <fieldset class="order-form__section  order-form__section--more-info">
-          <div class="order-form__section-container">
+        <fieldset class="order-form__section">
+          <div class="order-form__container  order-form__container--more-info">
             <legend class="order-form__section-heading">
               <label for="more-info">Доп</label>
             </legend>
             <textarea class="order-form__textarea" name="more-info" id="more-info" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
         </fieldset>
-        <p class="order-form__comment">*Поля обязательны для заполнения</p>
-        <button class="btn" type="submit">Отправить заказ</button>
+        <div class="order-form__container  order-form__container--footer">
+          <p class="order-form__comment">*Поля обязательны для заполнения</p>
+          <button class="btn" type="submit">Отправить заказ</button>
+        </div>
       </form>
     </main>
     <footer class="main-footer">

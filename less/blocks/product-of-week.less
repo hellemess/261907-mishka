@@ -2,10 +2,9 @@
   .container();
 
   padding-top: 29px;
-  padding-right: 30px;
-  padding-bottom: 35px;
-  padding-left: 30px;
-  box-sizing: border-box;
+  padding-right: 9%;
+  padding-bottom: 42px;
+  padding-left: 9%;
 }
 
 .product-of-week__heading {
@@ -41,25 +40,20 @@
 .product-of-week__features td {
   padding: 0;
   padding-top: 4px;
+  padding-right: 10%;
   padding-bottom: 5px;
 }
 
-.product-of-week__features td:last-child {
-  padding-left: 20px;
-}
-
 .product-of-week__picture {
+  margin-top: 28px;
   text-align: center;
-}
 
-.product-of-week__picture img {
   width: 260px;
-  height: 315px;
-  margin-top: 29px;
+  height: auto;
 }
 
 .product-of-week__price {
-  margin-top: 9px;
+  margin-top: 10px;
 
   .bold();
 
@@ -73,26 +67,23 @@
 @media (min-width: @tablet-width) {
   .product-of-week {
     padding: 0;
-    padding-top: 47px;
-    padding-bottom: 53px;
+    padding-top: 58px;
+    padding-bottom: 69px;
   }
 
   .product-of-week__header {
     display: flex;
 
     justify-content: space-between;
+    align-items: flex-end;
   }
 
   .product-of-week__heading {
-    width: 430px;
-    margin-left: -3px;
-
     font-size: 43px;
   }
 
   .product-of-week__crossheading {
-    width: 126px;
-    margin-top: 11px;
+    width: 19%;
 
     line-height: 1;
     text-align: center;
@@ -102,8 +93,8 @@
     position: relative;
 
     margin-top: 51px;
-    margin-left: -1px;
-    padding-right: 378px;
+    padding-right: 38%;
+    box-sizing: border-box;
   }
 
   .product-of-week__desc {
@@ -115,63 +106,61 @@
     margin-top: 36px;
   }
 
-  .product-of-week__features td:last-child {
-    padding-left: 2px;
+  .product-of-week__features td {
+    padding-right: 0;
   }
 
-  .product-of-week__picture img {
+  .product-of-week__picture {
     position: absolute;
-    top: -21px;
-    right: 0;
+    bottom: -9px;
+    left: 61%;
 
     width: 333px;
-    height: 404px;
+    height: auto;
+    margin: 0;
   }
 
   .product-of-week__price {
     margin-top: 48px;
-    margin-left: 7px;
 
     font-size: 20px;
   }
 
   .product-of-week .btn {
     margin-top: 26px;
-    padding-left: 7px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .product-of-week {
-    padding-top: 126px;
-    padding-bottom: 73px;
+    width: 700px;
+    padding-top: 140px;
+    padding-bottom: 96px;
   }
 
   .product-of-week__header {
-    width: 699px;
+    position: relative;
   }
 
   .product-of-week__heading {
-    width: 529px;
-
-    order: 1;
-
     font-size: 53px;
   }
 
   .product-of-week__crossheading {
-    margin-top: 16px;
-    margin-left: 19px;
+    position: absolute;
+    top: 16px;
+    left: -130px;
+
+    width: 75px;
   }
 
   .product-of-week__container {
-    margin-top: 47px;
-    margin-left: 175px;
-    padding-right: 583px;
+    margin-top: 48px;
+    padding-right: 280px;
   }
 
   .product-of-week__features {
-    margin-top: 51px;
+    margin-top: 50px;
   }
 
   .product-of-week__features td {
@@ -179,8 +168,9 @@
     padding-bottom: 7px;
   }
 
-  .product-of-week__picture img {
-    top: -186px;
+  .product-of-week__picture {
+    bottom: 0;
+    left: 350px;
     z-index: -1;
 
     width: 525px;

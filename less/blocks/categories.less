@@ -1,57 +1,88 @@
 .categories {
-  .reset-list();
   .container();
+  .reset-list();
 }
 
 .categories__link {
+  position: relative;
+
   display: block;
-  padding-top: 25px;
-  padding-bottom: 30px;
-  padding-left: 29px;
+  padding-top: 24px;
+  padding-bottom: 29px;
+  padding-left: 9%;
 
   .bold(19px, white);
 
   line-height: 1.3;
   text-decoration: none;
 
-  &--accessories {
-    background: @aqua-2;
-
-    &:hover {
-      background: @aqua-1;
-    }
-
-    &:active {
-      background: @aqua-1;
-    }
-  }
-
-  &--toys {
-    background: @aqua-3;
-
-    &:hover {
-      background: @aqua-4;
-    }
-
-    &:active {
-      background: @aqua-4;
-    }
-  }
-
   &:hover {
     margin-top: -5px;
-    padding-bottom: 35px;
+    padding-bottom: 34px;
   }
 
   &:active {
     color: fade(white, 30%);
   }
+
+  &--accessories {
+    background: @aqua-2;
+    border: 1px solid @aqua-2;
+
+    &:hover {
+      background: @aqua-1;
+      border-color: @aqua-1;
+    }
+
+    &:active {
+      background: @aqua-1;
+      border-color: @aqua-1;
+    }
+  }
+
+  &--toys {
+    background: @aqua-4;
+    border: 1px solid @aqua-4;
+
+    &:hover {
+      background: @aqua-5;
+      border-color: @aqua-5;
+    }
+
+    &:active {
+      background: @aqua-5;
+      border-color: @aqua-5;
+    }
+  }
+}
+
+.categories__link svg {
+  position: absolute;
+  right: 8%;
+
+  fill: fade(@aqua-6, 50%);
+}
+
+.categories__link:hover svg {
+  fill: fade(@aqua-6, 70%);
+}
+
+.categories__link:active svg {
+  fill: fade(@aqua-6, 30%);
+}
+
+.categories__link--accessories svg {
+  top: 21px;
+}
+
+.categories__link--toys svg {
+  top: 19px;
 }
 
 @media (min-width: @tablet-width) {
   .categories {
     display: flex;
-    margin-top: -118px;
+    margin-top: -117px;
   }
 
   .categories__item {
@@ -59,11 +90,26 @@
   }
 
   .categories__link {
-    padding-top: 28px;
-    padding-left: 36px;
+    padding-top: 27px;
+    padding-bottom: 28px;
+    padding-left: 10%;
 
     font-size: 20px;
     line-height: 1.5;
+
+    &:hover {
+      padding-bottom: 33px;
+    }
+  }
+
+  .categories__link--accessories svg {
+    top: 28px;
+    right: 7%;
+  }
+
+  .categories__link--toys svg {
+    top: 30px;
+    right: 10%;
   }
 }
 
@@ -73,11 +119,19 @@
   }
 
   .categories__link {
-    padding-left: 38px;
-    padding-bottom: 28px;
+    padding-bottom: 27px;
+    padding-left: 37px;
 
     &:hover {
-      padding-bottom: 33px;
+      padding-bottom: 32px;
     }
+  }
+
+  .categories__link--accessories svg {
+    right: 24px;
+  }
+
+  .categories__link--toys svg {
+    right: 33px;
   }
 }

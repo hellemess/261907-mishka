@@ -1,15 +1,14 @@
 .features {
   .container();
 
-  padding-top: 24px;
-  padding-right: 30px;
-  padding-left: 30px;
+  margin-top: 17px;
+  padding-right: 9%;
+  padding-left: 9%;
   box-sizing: border-box;
 }
 
 .features__heading {
   margin: 0;
-  margin-left: -2px;
 
   .bold(25px, black);
 }
@@ -19,9 +18,10 @@
 }
 
 .features__item {
-  margin-top: 20px;
-  margin-left: -1px;
-  padding-top: 57px;
+  position: relative;
+
+  margin-top: 21px;
+  padding-top: 56px;
   padding-bottom: 6px;
 
   .bold(17px, black);
@@ -29,15 +29,49 @@
   line-height: 1.2;
 }
 
+.features__item svg {
+  position: absolute;
+
+  fill: @aqua-2;
+}
+
+.features__item--eco-friendly svg {
+  top: 0;
+  left: 2%;
+}
+
+.features__item--low-cost svg {
+  top: -9px;
+  left: 0;
+}
+
+.features__item--likable svg {
+  top: 3px;
+  left: 3%;
+}
+
+.features__item--handmade svg {
+  top: 4px;
+  left: 2%;
+}
+
+.features__item--patriotic svg {
+  top: -12px;
+  left: -2%;
+}
+
+.features__item--gift-wrapped svg {
+  top: 2px;
+  left: 1%;
+}
+
 @media (min-width: @tablet-width) {
   .features {
+    margin-top: 31px;
     padding: 0;
-    padding-top: 47px;
   }
 
   .features__heading {
-    margin-left: -4px;
-
     font-size: 43px;
   }
 
@@ -52,7 +86,6 @@
     margin-top: 29px;
     padding-top: 56px;
     padding-bottom: 26px;
-    padding-left: 1px;
 
     font-size: 20px;
     line-height: 1.1;
@@ -73,12 +106,37 @@
       order: 4;
     }
   }
+
+  .features__item--eco-friendly svg {
+    top: 1px;
+  }
+
+  .features__item--low-cost svg {
+    top: -8px;
+  }
+
+  .features__item--likable svg {
+    top: 5px;
+    left: 2%;
+  }
+
+  .features__item--handmade svg {
+    left: 1%;
+  }
+
+  .features__item--patriotic svg {
+    top: -11px;
+  }
+
+  .features__item--gift-wrapped svg {
+    top: 3px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .features {
     width: 700px;
-    padding-top: 58px;
+    margin-top: 35px;
   }
 
   .features__heading {

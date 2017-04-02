@@ -5,21 +5,23 @@
 
   .container();
 
-  padding-top: 29px;
-  padding-right: 30px;
-  padding-bottom: 46px;
-  padding-left: 30px;
+  padding-right: 9%;
+  padding-bottom: 45px;
+  padding-left: 9%;
   box-sizing: border-box;
 
   transform: translate(-50%, -50%);
 
   background: white;
-  border: 1px solid @gray-5;
+  border: 1px solid @gray-6;
+  border-right-color: white;
+  border-left-color: white;
   box-shadow: 0 5px 10px 0 fade(black, 25%);
 }
 
 .put-in-cart__heading {
   margin: 0;
+  margin-top: 30px;
 
   .bold(25px, black);
 
@@ -30,7 +32,7 @@
 
 .put-in-cart__choose-size p {
   margin: 0;
-  margin-top: 13px;
+  margin-top: 12px;
 
   text-align: center;
 }
@@ -44,44 +46,63 @@
   justify-content: space-between;
 }
 
+.put-in-cart__item {
+  width: 32%;
+}
+
 .put-in-cart__input {
   display: none;
 }
 
 .put-in-cart__size {
   display: block;
-  width: 78px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 
   .bold();
 
   text-align: center;
 
   border: 2px solid @gray-3;
+
+  &:hover {
+    border-color: @gray-5;
+  }
 }
 
 .put-in-cart__input:checked + .put-in-cart__size {
-  border-color: @aqua-1;
+  border-color: @aqua-2;
 }
 
 .put-in-cart .btn {
   width: 100%;
-  margin-top: 33px;
+  margin-top: 32px;
 }
 
 @media (min-width: @tablet-width) {
   .put-in-cart {
-    width: 566px;
-    padding-top: 44px;
+    width: 568px;
+    padding-right: 106px;
+    padding-bottom: 46px;
+    padding-left: 106px;
+
+    border-right-color: @gray-6;
+    border-left-color: @gray-6;
   }
 
   .put-in-cart__heading {
+    margin-top: 44px;
+
     font-size: 30px;
   }
 
   .put-in-cart__heading br {
     display: none;
+  }
+
+  .put-in-cart__choose-size {
+    margin-right: 2px;
+    margin-left: 2px;
   }
 
   .put-in-cart__choose-size p {
@@ -91,26 +112,16 @@
   }
 
   .put-in-cart__list {
-    margin-top: 20px;
+    margin-top: 19px;
 
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .put-in-cart__item {
-    margin-right: 8px;
-  }
-
-  .put-in-cart__item:last-child {
-    margin-right: 0;
-  }
-
-  .put-in-cart__size {
-    width: 108px;
+    width: 112px;
   }
 
   .put-in-cart .btn {
-    width: 352px;
-    margin: 0 auto;
     margin-top: 31px;
   }
 }

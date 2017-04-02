@@ -1,15 +1,48 @@
 .copyright {
+  width: 188px;
   margin-top: 17px;
-  padding-right: 57px;
+  margin-right: auto;
+  margin-left: auto;
 
-  .bold(19px, black);
+  .bold(19px);
 
   font-style: normal;
-  text-align: center;
+}
+
+.copyright__link {
+  position: relative;
+
+  display: block;
+  padding-right: 30px;
+
+  text-decoration: none;
+
+  color: black;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__link svg {
+  position: absolute;
+  top: 5px;
+  right: 0;
+
+  fill: @aqua-2;
+}
+
+.copyright__link:hover svg {
+  fill: @aqua-5;
 }
 
 @media (min-width: @tablet-width) {
   .copyright {
-    margin-top: 2px;
+    width: 183px;
+    margin: 0;
+  }
+
+  .copyright__link svg {
+    right: -4px;
   }
 }

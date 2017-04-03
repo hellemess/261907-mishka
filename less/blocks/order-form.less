@@ -1,33 +1,31 @@
 .order-form {
-  margin-top: 32px;
+  margin-top: 15px;
 }
 
 .order-form__section {
-  margin: 0;
-  padding: 0;
-
-  border: none;
-}
-
-.order-form__container {
   width: 80%;
   min-width: 260px;
   margin: 0 auto;
+  padding: 0;
 
+  border: none;
   border-top: 1px solid @aqua-3;
 
   &--color {
-    margin-top: 35px;
+    margin-top: 18px;
   }
 
   &--name {
-    margin-top: 33px;
+    margin-top: 17px;
   }
 
-  &--phone-number,
+  &--phone-number {
+    margin-top: 22px;
+  }
+
   &--email,
   &--more-info {
-    margin-top: 40px;
+    margin-top: 23px;
   }
 
   &--phone-number,
@@ -41,7 +39,6 @@
 }
 
 .order-form__section-heading {
-  margin-top: -17px;
   padding: 0;
   padding-right: 10%;
 
@@ -71,8 +68,8 @@
   position: relative;
 
   display: block;
-  min-height: 35px;
-  margin-top: 15px;
+  min-height: 34px;
+  margin-top: 16px;
   padding-top: 9px;
   padding-left: 24%;
 
@@ -158,10 +155,7 @@
 
   line-height: 1;
 
-  &--last-name {
-    margin-top: 23px;
-  }
-
+  &--last-name,
   &--patronym {
     margin-top: 22px;
   }
@@ -206,7 +200,7 @@
 
 .order-form__field {
   padding-top: 16px;
-  padding-bottom: 14px;
+  padding-bottom: 15px;
 
   border-bottom: 2px solid @main-color;
 
@@ -216,26 +210,26 @@
   }
 }
 
-.order-form__container--phone-number svg,
-.order-form__container--email svg {
+.order-form__section--phone-number svg,
+.order-form__section--email svg {
   position: absolute;
-  top: 25px;
+  top: 42px;
 
   fill: fade(black, 20%)
 }
 
-.order-form__container--phone-number svg {
+.order-form__section--phone-number svg {
   right: 3%;
 }
 
-.order-form__container--email svg {
+.order-form__section--email svg {
   right: 1%;
 }
 
-.order-form__container--phone-number:hover svg,
-.order-form__container--phone-number:focus svg,
-.order-form__container--email:hover svg,
-.order-form__container--email:focus svg {
+.order-form__section--phone-number:hover svg,
+.order-form__section--phone-number:focus svg,
+.order-form__section--email:hover svg,
+.order-form__section--email:focus svg {
   fill: @aqua-3;
 }
 
@@ -250,7 +244,7 @@
 }
 
 .order-form__comment {
-  margin-top: 10px;
+  margin-top: 11px;
 
   font-size: 14px;
 }
@@ -262,22 +256,28 @@
 
 @media (min-width: @tablet-width) {
   .order-form {
-    margin-top: 57px;
+    margin-top: 56px;
   }
 
-  .order-form__section:nth-child(2),
-  .order-form__section:nth-child(4),
-  .order-form__section:nth-child(5) {
+  .order-form__background {
+    border: 1px solid transparent;
+  }
+
+  .order-form__background:nth-child(2),
+  .order-form__background:nth-child(4),
+  .order-form__background:nth-child(5) {
     background: @gray-2;
   }
 
-  .order-form__container {
+  .order-form__section {
     position: relative;
 
-    .container();
-
+    width: 87%;
+    max-width: 1050px;
     margin-top: 50px;
+    margin-right: auto;
     margin-bottom: 52px;
+    margin-left: auto;
     padding-left: 22%;
     box-sizing: border-box;
 
@@ -288,12 +288,8 @@
     }
 
     &--name {
-      display: flex;
-      margin-bottom: 50px;
-
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
+      margin-top: 48px;
+      margin-bottom: 49px;
     }
 
     &--phone-number {
@@ -301,8 +297,8 @@
     }
 
     &--email {
-      margin-top: 24px;
-      margin-bottom: 50px;
+      margin-top: 21px;
+      margin-bottom: 48px;
     }
 
     &--footer {
@@ -318,7 +314,7 @@
 
   .order-form__section-heading {
     position: absolute;
-    top: 25px;
+    top: 8px;
     left: 0;
 
     background: transparent;
@@ -330,7 +326,7 @@
     flex-wrap: wrap;
   }
 
-  .order-form__container--type .order-form__item {
+  .order-form__section--type .order-form__item {
     width: 100%;
   }
 
@@ -375,15 +371,16 @@
     height: 21px;
   }
 
-  .order-form__container--color .order-form__item  {
+  .order-form__section--color .order-form__item  {
     width: 52%;
   }
 
-  .order-form__container--color .order-form__item:nth-child(2n) {
+  .order-form__section--color .order-form__item:nth-child(2n) {
     width: 48%;
   }
 
   .order-form__checkbox {
+    min-height: 35px;
     padding-left: 32%;
   }
 
@@ -397,6 +394,14 @@
 
     width: 27px;
     height: 14px;
+  }
+
+  .order-form__container {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
   }
 
   .order-form__label {
@@ -422,16 +427,16 @@
     }
   }
 
-  .order-form__container--phone-number svg,
-  .order-form__container--email svg {
+  .order-form__section--phone-number svg,
+  .order-form__section--email svg {
     top: 11px;
   }
 
-  .order-form__container--phone-number svg {
+  .order-form__section--phone-number svg {
     right: 4%;
   }
 
-  .order-form__container--email svg {
+  .order-form__section--email svg {
     right: 3%;
   }
 
@@ -458,10 +463,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .order-form {
-  }
-
-  .order-form__container {
+  .order-form__section {
     width: 700px;
     margin-bottom: 51px;
     padding-left: 0;
@@ -475,12 +477,12 @@
     }
 
     &--phone-number {
-      margin-bottom: 26px;
+      margin-bottom: 20px;
     }
 
     &--email {
       margin-top: 0px;
-      margin-bottom: 49px;
+      margin-bottom: 48px;
     }
 
     &--more-info {
@@ -501,11 +503,11 @@
     padding-left: 81px;
   }
 
-  .order-form__container--color .order-form__item {
+  .order-form__section--color .order-form__item {
     width: 263px;
   }
 
-  .order-form__container--color .order-form__item:nth-child(2n) {
+  .order-form__section--color .order-form__item:nth-child(2n) {
     width: 263px;
   }
 
@@ -513,7 +515,7 @@
     margin-top: 0;
   }
 
-  .order-form__container--color .order-form__item:nth-child(3n) {
+  .order-form__section--color .order-form__item:nth-child(3n) {
     width: 170px;
   }
 
@@ -534,13 +536,13 @@
     }
   }
 
-  .order-form__container--phone-number svg {
+  .order-form__section--phone-number svg {
     top: 11px;
     right: 8px;
   }
 
-  .order-form__container--email svg {
-    top: 9px;
+  .order-form__section--email svg {
+    top: 10px;
     right: 4px;
   }
 }
